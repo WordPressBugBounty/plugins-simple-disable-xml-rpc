@@ -1,0 +1,211 @@
+/**
+ * Admin Settings Page Styles
+ * Simple Disable XML-RPC
+ */
+
+.sdxrpc-settings-wrap {
+    margin: 20px 20px 20px 0;
+}
+
+.sdxrpc-container {
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+/* Card Styles */
+.sdxrpc-card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    margin-bottom: 20px;
+}
+
+.sdxrpc-card-header {
+    border-bottom: 1px solid #eee;
+    padding: 20px 24px;
+    background: #fafafa;
+    border-radius: 4px 4px 0 0;
+}
+
+.sdxrpc-card-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.sdxrpc-card-body {
+    padding: 24px;
+}
+
+/* Setting Row */
+.sdxrpc-setting-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.sdxrpc-setting-label {
+    flex: 1;
+    padding-right: 24px;
+}
+
+.sdxrpc-setting-label h3 {
+    margin: 0 0 8px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.sdxrpc-setting-label .description {
+    margin: 0;
+    color: #646970;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.sdxrpc-setting-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Toggle Switch Styles */
+.sdxrpc-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.sdxrpc-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.sdxrpc-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #8c8f94;
+    transition: 0.3s;
+    border-radius: 26px;
+}
+
+.sdxrpc-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.sdxrpc-toggle input:checked + .sdxrpc-toggle-slider {
+    background-color: #2271b1;
+}
+
+.sdxrpc-toggle input:focus + .sdxrpc-toggle-slider {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #2271b1;
+}
+
+.sdxrpc-toggle input:checked + .sdxrpc-toggle-slider:before {
+    transform: translateX(24px);
+}
+
+/* Toggle Status Text */
+.sdxrpc-toggle-status {
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 70px;
+}
+
+.sdxrpc-toggle-status .status-enabled,
+.sdxrpc-toggle-status .status-disabled {
+    display: none;
+}
+
+.sdxrpc-toggle input:checked ~ .sdxrpc-toggle-status .status-enabled {
+    display: inline;
+    color: #2271b1;
+}
+
+.sdxrpc-toggle input:not(:checked) ~ .sdxrpc-toggle-status .status-disabled {
+    display: inline;
+    color: #646970;
+}
+
+/* Info Card */
+.sdxrpc-info-card {
+    background: #f0f6fc;
+    border: 1px solid #c3dcf5;
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+
+.sdxrpc-info-card h3 {
+    margin-top: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.sdxrpc-info-card p {
+    margin: 12px 0;
+    color: #1d2327;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.sdxrpc-info-card ul {
+    margin: 12px 0;
+    padding-left: 24px;
+}
+
+.sdxrpc-info-card ul li {
+    color: #1d2327;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Submit Button */
+.sdxrpc-card-body .button-primary {
+    margin-top: 0;
+    padding: 8px 20px;
+    height: auto;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 782px) {
+    .sdxrpc-setting-row {
+        flex-direction: column;
+    }
+    
+    .sdxrpc-setting-label {
+        padding-right: 0;
+        margin-bottom: 16px;
+    }
+    
+    .sdxrpc-container {
+        margin-right: 10px;
+    }
+}
+
+/* Success/Error Messages */
+.sdxrpc-settings-wrap .notice {
+    margin: 20px 0;
+}
